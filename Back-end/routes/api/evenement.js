@@ -4,8 +4,6 @@ const {check, validationResult} = require ('express-validator/check')
 const auth = require('../../middleware/auth')
 const User=require('../../models/user')
 const Evenement=require('../../models/evenement')
-const TodayEvenement=require('../../models/todaysEvent')
-
 const fileUpload = require('express-fileupload')
 const BodyParser = require ('body-parser')
 var cors = require('cors');
@@ -21,6 +19,66 @@ app.use(function(req, res, next) {
     res.header('Access-Control-Allow-Headers', 'Content-Type');
     next();
 })
+//@route Get api/evenement/
+//@desc get all today's events
+//@access public 
+
+
+  router.get('/todays' , async (req,res)=>{
+    let date = new Date()
+    let year = date.getFullYear()
+    let month = date.getMonth()+1
+    let day = date.getDate()
+
+    if (month<10) month ="0"+month
+    if (day<10) day="0"+day
+
+
+    let queryDate = year+"-"+month+"-"+day
+    try {
+        const todays =await Evenement.find({'time.startDate' : {$eq : queryDate} }, function  (err, data) {
+            if (err) return handleError(err);
+         
+            console.log('todays')
+          });
+          res.json(todays)
+
+    } catch (err) {
+        console.error(err.message)
+        return res.status(500).send('ServerError')
+    }
+});
+
+//@route Get api/evenement/
+//@desc get all upcoming events
+//@access public 
+
+
+router.get('/upcoming' , async (req,res)=>{
+    let date = new Date()
+    let day = date.getDate()
+    let Tab = []
+    try {
+        const upcoming =await Evenement.find({ }, function  (err, data) {
+            if (err) return handleError(err);        
+            data.map((el,i)=> {
+                
+             let dataDate = Number(el.time[0].startDate.slice(8,10))
+             console.log('what i slices from upcoming',dataDate)
+             if (dataDate > Number(day) ){
+                    Tab.push(el)
+                    }
+            })
+            console.log('the upcoming ' , Tab)
+          });   
+          res.json(Tab)
+    } catch (err) {
+        console.error(err.message)
+        return res.status(500).send('ServerError')
+    }
+});
+
+
 
 // @route Post api/evenement
 // @desc  upload image 
@@ -45,15 +103,7 @@ router.post('/upload', (req,res)=>{
 //@route Get api/evenement
 //@desc get all events
 //@access Private
-router.get('/', auth , async (req,res)=>{
-    try {
-        const events=await Evenement.find().sort({date:-1}) // the recent most recent 
-        res.json(events)
-    } catch (err) {
-        console.error(err.message)
-        return res.status(500).send('ServerError')
-    }
-});
+
 // @route Post api/evenement
 // @desc Create an event
 // @access Private
@@ -128,7 +178,7 @@ router.get('/', auth , async (req,res)=>{
 //@access public
 router.get('/:id' , async (req,res)=>{
     try {
-        const event=await TodayEvenement.findById(req.params.id) 
+        const event=await Evenement.findById(req.params.id) 
        if(!event){
            return res.status(404).json({msg:'Event not found'})
        }

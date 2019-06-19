@@ -3,11 +3,8 @@ const users = require('./routes/api/users')
 const profile = require('./routes/api/profile')
 const auth = require ('./routes/api/auth')
 const evenement = require('./routes/api/evenement')
-const todaysEvents = require ('./routes/api/todayEvents')
-const upcomingevents = require ('./routes/api/upcomingEvents')
 const fileUpload = require('express-fileupload')
 const BodyParser = require ('body-parser')
-const assert = require ('assert')
 
 
 const connectDB= require ('./config/db')
@@ -35,8 +32,6 @@ app.use('/api/auth',auth)
 app.use('/api/users',users)
 app.use('/api/profiles',profile)
 app.use('/api/evenement',evenement)
-app.use('/api/todaysevents',todaysEvents)
-app.use('/api/upcomingevents',upcomingevents)
 
 
 

@@ -1,13 +1,13 @@
 import {combineReducers} from 'redux'
 import auth from './auth'
 import event from './event'
-import todaysEvent from './todaysEvent'
-import UpcomingEvent from './upcomingEvent'
+import Todays from './Todays'
+import Upcoming from './Upcoming'
+
 
 export default combineReducers({
     auth,
     event,
-    todaysEvent,
-    UpcomingEvent
-
+    Todays,
+    Upcoming
 });

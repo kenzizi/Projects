@@ -7,7 +7,7 @@ const EventDetailInfo = ({cardID,event}) => {
   useEffect(() => {
     store.dispatch(getEventbyID(cardID))
   }, [] ) 
-  console.log(cardID,"zezezezezezezezezezeze")
+  console.log(event,"karim")
   let bg = event[0].imgPath;
   var sectionStyle = {
     backgroundImage: `url(${bg})`

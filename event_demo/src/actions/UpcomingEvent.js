@@ -10,7 +10,7 @@ export const getUpcomingEvents = () => async dispatch => {
         }
     }
     try {
-        const res = await axios.get('http://localhost:4000/api/upcomingevents/all')
+        const res = await axios.get('http://localhost:4000/api/evenement/upcoming')
         dispatch ({
             type : GETUPCOMINGEVENT ,
             payload :res.data

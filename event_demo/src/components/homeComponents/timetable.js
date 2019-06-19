@@ -63,8 +63,8 @@ Timetable.propTypes={
 }
 
 const mapStateToProps = state => ({
-    todaysEvents:state.todaysEvent,
-    upEvents:state.UpcomingEvent
+    todaysEvents:state.Todays,
+    upEvents:state.Upcoming
 });
 
 export default connect(mapStateToProps,{getTodaysEvents,getUpcomingEvents}) (Timetable)

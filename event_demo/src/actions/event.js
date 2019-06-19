@@ -63,7 +63,7 @@ export const getEventbyID = (cardID) => async dispatch => {
             type : GETEVENT_BYID, 
             payload :res.data
         })
-        console.log('from dispatch',res.data)
+        console.log('from dispatch',res.data) 
     } catch (err) {
         console.log('get', err)
     }

@@ -11,7 +11,7 @@ import {getEventbyID} from '../../actions/event'
     }
     render() {
         const {event} = this.props
-        console.log(event._id,"il id taa event")
+        console.log(event,"il id taa event")
        
         return (
        
