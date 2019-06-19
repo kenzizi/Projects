@@ -1,0 +1,51 @@
+.card-container{
+    text-align: center;
+    padding: 0;
+    transition: 1s;
+    background-color: rgba(168, 168, 168, 0.602);
+    border-bottom-left-radius: 20px;    
+    border-bottom-right-radius: 20px;    
+
+}
+.card-container:hover{
+    box-shadow: 10px 6px 40px #6c63ff;
+    transition: 1s;
+
+}
+.card-img{
+    width:100%;
+    height: 300px;
+    background-size: cover;
+
+    
+}
+.card-content{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+   align-content: center;
+   align-items: center;
+   text-align: center
+
+}
+.event-title{
+    font-weight: bold;
+    font-size: 14px;
+    margin: 10px;
+    color: rgb(56, 64, 95);
+
+}
+.card-link{
+    margin: 10px;
+    font-weight: bold;
+    border-radius: 10px;
+
+}
+.home-info {
+    font-size: 50px
+}
+.card-link:hover{
+    transition: 0.5s;
+
+}
+

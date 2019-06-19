@@ -1,0 +1,679 @@
+@import "~antd/dist/antd.css";
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local("Material Icons"), local("MaterialIcons-Regular"),
+    url(https://example.com/MaterialIcons-Regular.woff2) format("woff2"),
+    url(https://example.com/MaterialIcons-Regular.woff) format("woff"),
+    url(https://example.com/MaterialIcons-Regular.ttf) format("truetype");
+}
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: "liga";
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+/* Introduction css code start from here */
+.introduction-background {
+  margin-top: 100px;
+  background-image: url("./images/introduction.jpeg");
+  width: 100vw;
+  height: 600px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  z-index: -2;
+  opacity: 0.8;
+}
+.wave-header-intro::before {
+  background-image: url("./images/wave_header.svg");
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 100%;
+  height: 20%;
+  background-size: 100% 100%;
+  transform: rotate(-180deg);
+
+
+}
+.wave-header-intro-2::before {
+  background-image: url("./images/wave_header.svg");
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0%;
+  width: 100%;
+  height: 20%;
+  background-size: 100% 100%;
+
+
+}
+.section-intro {
+  position: relative;
+}
+@media only screen and (max-width: 800px) {
+  .intro-content {
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    text-align: center;
+  }
+  .intro-parag {
+    font-size: 60px;
+    color: rgba(31, 33, 41, 0.877);
+  }
+}
+@media only screen and (min-width: 1380px) {
+  .intro-content {
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    top:40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    text-align: center;
+  }
+  .intro-parag {
+    font-size:70px;
+    color: rgba(31, 33, 41, 0.877);
+    padding: 0 400px;
+  }
+}
+
+.intro-buttons {
+  padding: 10px 30px;
+  border: 1px solid white;
+  margin-left: 10px;
+  border-radius: 30px;
+  color: #ccf6ff;
+  font-weight: bolder;
+  font-size: 20px;
+}
+.intro-buttons:hover {
+  background-color: #787f96;
+  color: #ccf6ff;
+  text-decoration: none;
+  border-bottom: 4px solid #d9ebff;
+}
+
+/* introduction end here */
+
+/* Categories Section  start here */
+
+.categories-intro {
+  margin-top: 250px;
+  position: relative;
+}
+
+.categories-parag {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 0px;
+  line-height: 30px;
+  padding: 30px 0 !important;
+  display: block;
+}
+@media only screen and (min-width: 1380px) {
+  .categories-front-title {
+    text-align: center;
+    font-size: 100px;
+    font-weight: bolder;
+    z-index: 2;
+  }
+  .categories-back-title {
+    text-align: center;
+    font-size: 300px;
+    font-weight: bolder;
+    position: absolute;
+    left: 15%;
+    transform: translate(-6%, -50%);
+    z-index: -2;
+    color: rgba(172, 164, 164, 0.527);
+  }
+}
+@media only screen and (max-width: 1380px) {
+  .categories-front-title {
+    text-align: center;
+    font-size: 80px;
+    font-weight: bolder;
+    z-index: 2;
+  }
+  .categories-back-title {
+    text-align: center;
+    font-size: 250px;
+    font-weight: bolder;
+    position: absolute;
+    left: 15%;
+    transform: translate(-6%, -50%);
+    z-index: -2;
+    color: rgba(172, 164, 164, 0.527);
+  }
+}
+@media only screen and (max-width: 800px) {
+  .categories-front-title {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bolder;
+    z-index: 2;
+  }
+  .categories-back-title {
+    text-align: center;
+    font-size: 200px;
+    font-weight: bolder;
+    position: absolute;
+    left: 15%;
+    transform: translate(-6%, -50%);
+    z-index: -2;
+    color: rgba(172, 164, 164, 0.527);
+  }
+}
+/* Categories Section ends here */
+
+/* Time table css start here */
+.timetable-section {
+  margin-top: 50px;
+}
+.timetable-link {
+  font-size: 30px;
+  font-weight: bold;
+  color: #212529;
+}
+.timetable-link:hover {
+}
+.timetable-cards-section {
+  margin-top: 50px;
+}
+
+.timetable-time-title {
+  font-weight: bold;
+  font-size: 18px;
+  width: 100px;
+}
+.timetable-card-image {
+  background-image: url("./images/event-jogging.jpeg");
+  width: 137px;
+  height: 137px;
+  background-size: cover;
+  border-radius: 30px;
+}
+@media only screen and (min-width: 1000px) {
+  .timetable-card-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+    padding: 50px;
+  }
+  .timetable-card-container:hover {
+    box-shadow: 4px 5px 10px rgba(156, 151, 151, 0.568);
+    border-radius: 20px;
+  }
+  .flex-item {
+    flex-grow: 2;
+    margin-left: 15px;
+  }
+  .card-style {
+    padding: 0 16px 0 0;
+  }
+  .time-card-event-title {
+    padding: 10px 10px 0;
+    font-weight: bolder;
+    font-size: 25px;
+  }
+  .time-card-event-content {
+    padding: 0 10px;
+    font-size: 17px;
+  }
+  .timetable-card-button {
+    font-weight: bold;
+    padding: 10px 40px;
+    border: 1px solid rgb(209, 128, 209);
+    border-radius: 10px;
+    color: #212529;
+  }
+  .timetable-card-button:hover {
+    background-color: #7c529c;
+    text-decoration: none;
+    color: white;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .timetable-card-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .timetable-card-container:hover {
+    box-shadow: 4px 5px 10px rgba(156, 151, 151, 0.568);
+    border-radius: 20px;
+  }
+  .flex-item {
+    flex-grow: 2;
+    margin-left: 15px;
+  }
+  .card-style {
+    padding: 0 16px 0 0;
+  }
+  .time-card-event-title {
+    padding: 10px 10px 0;
+    font-weight: bolder;
+    font-size: 25px;
+  }
+  .time-card-event-content {
+    padding: 0 10px;
+    font-size: 11px;
+  }
+  .timetable-card-button {
+    font-weight: bold;
+    padding: 10px 40px;
+    border: 1px solid rgb(209, 128, 209);
+    border-radius: 10px;
+    color: #212529;
+  }
+  .timetable-card-button:hover {
+    background-color: #7c529c;
+    text-decoration: none;
+    color: white;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .timetable-card-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .timetable-card-container:hover {
+    box-shadow: 4px 5px 10px rgba(156, 151, 151, 0.568);
+    border-radius: 20px;
+  }
+  .flex-item {
+    flex-grow: 2;
+    margin-left: 15px;
+  }
+  .card-style {
+    padding: 0 16px 0 0;
+  }
+  .time-card-event-title {
+    font-weight: bolder;
+    font-size: 15px;
+  }
+  .time-card-event-content {
+    font-size: 11px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 80px;
+  }
+  .timetable-card-button {
+    font-weight: 100;
+    padding: 4px 10px;
+    border: 1px solid rgb(209, 128, 209);
+    border-radius: 10px;
+    color: #212529;
+  }
+  .timetable-card-button:hover {
+    background-color: #7c529c;
+    text-decoration: none;
+    color: white;
+  }
+}
+
+/*  Time table css end here */
+
+/* Sponsors section starts from here */
+.sponsors-section {
+  margin-top: 100px;
+  background-color: #6c63ff;
+  color: white;
+  height: 500px;
+  overflow: hidden;
+}
+.sponsors-text {
+  background-image: url("./images/sponsor.svg");
+  background-size: contain;
+  height: 500px;
+  margin-left: 100px;
+}
+.sponsors-section-title {
+  font-weight: bold;
+  font-size: 60px;
+  padding-top: 50px;
+}
+.sponsors-logos {
+  width: 200px;
+  height: 200px;
+  padding: 30px;
+}
+
+/* Sponsors section ends here */
+
+/* Title bar events css starts here */
+.titlebar-section-bg {
+  background-image: url("./images/calen.svg");
+  margin-top: 100px;
+  width: 100vw;
+  height: 600px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(145, 176, 216, 0.459);
+  background-size: cover;
+  position: absolute;
+  z-index: -2;
+}
+.titlebar-title {
+  font-size: 95px;
+  position: absolute;
+  font-weight: bold;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-60%, -50%);
+  z-index: 2;
+  width: 70%;
+  color: #fc6681;
+  text-align: left;
+}
+
+/* title bar events css ends here */
+
+/* Search bar css  starts here */
+.Searchbar-section {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/* search bar css ends here */
+
+/* event card css starts here */
+.ant-list-items {
+  display: flex;
+  flex-wrap: wrap
+}
+.event-card-container {
+  width: 100%;
+  height: 450px;
+  background-size: cover;
+  transition: 1.4s;
+  position: relative;
+  border-radius: 20px;
+}
+.event-card-container:hover {
+  box-shadow: 0px 2px 62px -12px rgba(0, 0, 0, 0.72);
+  transition: 2s;
+}
+.event-card-header {
+  padding-top: 10px;
+}
+.event-card-user {
+  position: absolute;
+  bottom: 10%;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  width: 100%;
+}
+.event-card-username {
+  font-weight: bold;
+  margin-left: 10px;
+  color: #fffffffa
+}
+
+.event-card-hover {
+  width: 100%;
+  height: 100%;
+  background-color: #8b9af2b7;
+  position: absolute;
+  top: 0%;
+  opacity: 0;
+  border-radius: 20px;
+  transition: 2s;
+}
+.event-card-info {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 10%
+
+ 
+}
+.event-card-infoicon {
+  position: absolute;
+  bottom: 10%;
+  left: 45%;
+  width: 50px;
+}
+.event-card-eventname {
+  color: white;
+  font-size: 20px;
+}
+.event-card-container:hover .event-card-hover {
+  opacity: 1;
+  transition: 2s;
+  cursor: pointer;
+}
+.event-card-time {
+  font-weight: bold;
+  width: 100%;
+  text-align: right;
+  color: #e87dc5;
+}
+.heart-icon {
+  color: rgb(62, 136, 206);
+  padding: 10px;
+}
+
+
+.numberStyle {
+  display: flex;
+  justify-content: center;
+}
+.number-paginate {
+  padding: 5px 15px;
+  font-size: 25px;
+  color: rgb(62, 136, 206);
+  font-weight: bold;
+  border: 1px solid rgb(62, 136, 206);
+  border-radius: 50%;
+  margin-left: 2px;
+  position: relative;
+  bottom: 0;
+}
+.number-paginate:hover {
+  background-color: rgb(62, 136, 206);
+  color: white;
+  cursor: pointer;
+}
+
+.event-card-user-hover{
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 1.7em;
+  color: white
+}
+.user-avatar-card {
+  text-align: center;
+  border-radius: 50%
+}
+/* event card css end here */
+
+/* login section css starts here */
+.signup-section {
+  margin-top: 150px;
+  background-image: url('./images//signup-bg.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%
+}
+.form-cc{
+  width: 100%
+}
+*[role="form"] {
+  padding: 15px;
+  margin: 0 auto;
+  border-radius: 0.3em;
+  background-color: #f2f2f2;
+  font-size: 1.4em
+}
+
+.form-cc> h2 { 
+  font-family: 'Open Sans' , sans-serif;
+  font-size: 100px;
+  font-weight: 800;
+  color: #08b0da;
+  margin-top: 5%;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+.registration-image {
+  background-color: red
+}
+
+/* login section css end here */
+
+/* event create css starts here */
+
+.event-create-form-section {
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+  background-attachment: fixed;
+  background-image: linear-gradient(to right top, #8fdcff, #66e9fe, #49f3ee, #5efbce, #8fffa5);  background-size: cover;
+padding: 20px
+
+}
+.event-create-form-section> form {
+  width: 50%
+}
+.event-create-form-items {
+  width: 100%;
+  height: 500px;
+  transition: 2s;
+
+}
+.event-create-form-items:hover {
+  border-radius: 20px;
+  transition: 2s;
+}
+.event-create-form-items:focus {
+  background-color: rgba(0, 0, 255, 0.356);
+  border-radius: 20px;
+  transition: 2s;
+}
+
+.create-event-title {
+  text-align: center;
+  font-weight: 800;
+  font-size: 2.9em;
+  color: #f0020283;
+}
+/* event create css ends here */
+
+/* event details css  starts here */
+
+.eventdetails-main-container {
+  margin-top: 150px;
+}
+.detail-user-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center
+}
+.detail-user-section >.user-img {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  margin-top: 50px;
+}
+.user-text-name {
+  font-size: 3em;
+  font-weight: bold;
+  padding: 20px;
+}
+.user-text-mail{
+  font-size: 2em;
+  font-weight: bold;
+  padding: 0 20px;
+  margin-bottom: 50px!important;
+
+}
+.detail-container {
+ background-color: rgba(70, 70, 224, 0.767)
+}
+
+
+.detail-card-section {
+  padding: 100px 50px;
+}
+.style-details {
+  display: flex;
+  align-items: center;
+  background-color: rgba(122, 230, 163, 0.281)
+}
+.detail-card-image-section {
+  width: 500px;
+  height: 500px;
+  background-size: cover;
+}
+.detail-card-detail-section {
+  margin-left: 20px;
+}
+
+.detail-card-texts {
+  font-family: 'Satisfy', cursive;
+
+  letter-spacing: 2px;
+
+  font-weight: bold;
+  font-size: 1.7em
+}
+
+
+
+
+
+
+
+
+
+/* event details css ends here */

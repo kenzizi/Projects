@@ -1,0 +1,7 @@
+    
+{
+    "mongoURI": "mongodb://localhost:27017/EventsDB",
+    "jwtSecret": "secrettoken",
+    "githubClientId": "",
+    "githubSecret": ""
+  }
